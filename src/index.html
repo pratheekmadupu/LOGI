@@ -1,212 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGI - Health & Immune Boosting</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for shades of brown and green */
-        :root {
-            --color-primary-brown: #5C4033; /* Darker brown for text/accents */
-            --color-secondary-brown: #8B4513; /* SaddleBrown for warmer tones */
-            --color-light-brown: #D2B48C; /* Tan for lighter backgrounds */
-            --color-primary-green: #228B22; /* ForestGreen for main green */
-            --color-secondary-green: #6B8E23; /* OliveDrab for softer green */
-            --color-light-green: #90EE90; /* LightGreen for lighter accents */
-        }
-        .bg-primary-brown { background-color: var(--color-primary-brown); }
-        .text-primary-brown { color: var(--color-primary-brown); }
-        .bg-secondary-brown { background-color: var(--color-secondary-brown); }
-        .text-secondary-brown { color: var(--color-secondary-brown); }
-        .bg-light-brown { background-color: var(--color-light-brown); }
-        .text-light-brown { color: var(--color-light-brown); }
-        .bg-primary-green { background-color: var(--color-primary-green); }
-        .text-primary-green { color: var(--color-primary-green); }
-        .bg-secondary-green { background-color: var(--color-secondary-green); }
-        .text-secondary-green { color: var(--color-secondary-green); }
-        .bg-light-green { background-color: var(--color-light-green); }
-        .text-light-green { color: var(--color-light-green); }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_largefill.png">
+<link rel="icon" type="image/x-icon" href="favicon_largefill.ico">
+  <title>LOGI FOR SMART LIVING</title>
+  <style>
+/* Basic nav styling */
+nav {
+  position: relative;
+}
 
-        /* Ensure smooth scrolling for navigation links */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+/* Hide menu in desktop */
+#menu {
+  display: none;
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  #menu {
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  /* When menu is active */
+  #menu.show {
+    display: flex;
+    max-height: 300px; /* enough for your links */
+    opacity: 1;
+  }
+
+  #menu li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #menu a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    /* CSS for the container */
+    .social-media-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    /* CSS for the small logos */
+    .social-media-container img {
+      width: 28px; /* Adjust this value for different small sizes (e.g., 24px, 30px) */
+      height: auto;
+      transition: transform 0.2s ease; /* Optional hover effect */
+    }
+
+    .social-media-container img:hover {
+      transform: scale(1.1); /* Makes the logo slightly larger on hover */
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-sans text-gray-800" style="font-family: 'Inter', sans-serif;">
+<body>
 
-    <!-- Header Section -->
-    <header class="bg-light-brown py-4 shadow-lg rounded-b-lg">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-            <!-- Logo Placeholder -->
-            <div class="flex items-center mb-4 md:mb-0">
-                <div class="w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center text-xs text-white mr-2">
-                    LOGO
-                </div>
-                <!-- Product Name -->
-                <h1 class="text-4xl md:text-5xl font-extrabold text-primary-brown tracking-wider">LOGI</h1>
-            </div>
+  <!-- Header -->
+ <header class="header">
+    <div class="container flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="https://i.ibb.co/My1QkhYF/logilogo2withoutbg.png" alt="LOGI Product Logo" class="h-32 w-auto">
+        <div style="font-weight:800;color:var(--brown-1)"></div>
+      </a>
 
-            <!-- Navigation Menu -->
-            <nav>
-                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg font-medium">
-                    <li><a href="#home" class="text-primary-green hover:text-secondary-green transition duration-300 rounded-md px-3 py-2">Home</a></li>
-                    <li><a href="#about" class="text-primary-green hover:text-secondary-green transition duration-300 rounded-md px-3 py-2">About</a></li>
-                    <li><a href="#benefits" class="text-primary-green hover:text-secondary-green transition duration-300 rounded-md px-3 py-2">Benefits</a></li>
-                    <li><a href="#contact" class="text-primary-green hover:text-secondary-green transition duration-300 rounded-md px-3 py-2">Contact Us</a></li>
-                </ul>
-            </nav>
+      <nav class="hidden md:flex items-center gap-6">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="benefits.html">Become Franchise</a>
+        <a class="nav-link" href="products.html">Products</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+      <nav>
+<nav></nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="benefits.html">Franchise</a></li>
+      <li><a href="products.html">products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+</nav>  
+
+    </div>
+  </header>
+
+  <!-- Hero: full-bleed video -->
+  <section class="hero-large">
+    <!-- Put hero.mp4 in same folder (rename your uploaded screen recording to hero.mp4) -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="hero.mp4" type="video/mp4">
+      <!-- fallback GIF -->
+      <img src="https://i.ibb.co/pgvGq97/Rhino-Eats-Rice-Shows-Tasty-unscreen.gif" alt="LOGI hero" style="width:100%;height:100%;object-fit:cover;">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content container">
+      <div class="hero-text">
+        <span class="hero-eyebrow">Natural • Nutritious • Trusted</span>
+        <h1 class="hero-title">LOGI-LOW GI FOR SMART LIVING</h1>
+        <p class="lead" style="color:rgba(255,255,255,0.92); max-width:60%;">LOGI delivers wholesome nutrition with carefully selected ingredients to support immunity, energy and digestive health — made for families who care about real results and real taste.</p>
+
+        <div style="margin-top:1.25rem;">
+          <a href="products.html" class="btn-primary">View Products</a>
+          <a href="benefits.html" style="margin-left:12px; color:white; font-weight:700; text-decoration:underline">Become Franchise →</a>
         </div>
-    </header>
+      </div>
 
-    <!-- Home Section -->
-    <section id="home" class="bg-primary-green text-white py-20 px-4 rounded-b-lg md:rounded-b-none">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6">Nourish Your Body, Boost Your Immunity</h2>
-            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
-                Discover LOGI, the nutritional food product designed to enhance your health and strengthen your immune system naturally.
-            </p>
-            <!-- Call to action button -->
-            <a href="#benefits" class="inline-block bg-secondary-brown text-white text-xl font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-light-brown hover:text-primary-brown transition duration-300">
-                Explore Benefits
-            </a>
+      <!-- right side feature card -->
+      <div class="hidden md:block" style="width:380px;">
+        <div class="card" style="background:rgba(255,255,255,0.06); color:white;">
+          <h4 style="font-weight:800; margin-bottom:.5rem">Featured — LOGI Malt Powder</h4>
+          <p style="opacity:.92; margin-bottom:1rem;">Immune boosting formula, vitamins, minerals and natural extracts for the whole family.</p>
+          <ul style="list-style:disc; margin-left:1rem; opacity:.95;">
+            <li>Net weight: 500g</li>
+            <li>Usage: Mix 2 scoops with warm milk/water</li>
+            <li>Gluten-free option available</li>
+          </ul>
+          <div style="margin-top:1rem;">
+            <a href="products.html" class="btn-primary">Buy Now</a>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- About Section -->
-    <section id="about" class="bg-gray-100 py-16 px-4">
-        <div class="container mx-auto flex flex-col md:flex-row items-center gap-8">
-            <div class="md:w-1/2">
-                <img src="http://googleusercontent.com/file_content/1" alt="LOGI Parboiled Rice" class="w-full h-auto rounded-lg shadow-lg">
-            </div>
-            <div class="md:w-1/2 text-center md:text-left">
-                <h3 class="text-4xl font-bold text-primary-brown mb-6">About LOGI</h3>
-                <p class="text-lg leading-relaxed mb-4">
-                    LOGI is more than just food; it's a commitment to a healthier lifestyle. Our products are carefully crafted
-                    to provide essential nutrients that support your overall well-being and fortify your body's natural defenses.
-                </p>
-                <p class="text-lg leading-relaxed">
-                    With a focus on wholesome ingredients, LOGI aims to make nutritious eating easy and delicious for the entire family.
-                </p>
-            </div>
-        </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="bg-primary-brown text-white py-16 px-4">
-        <div class="container mx-auto">
-            <h3 class="text-4xl font-bold text-center mb-12">Key Benefits of LOGI</h3>
+  
+<section class="container" style="margin-top:2rem; display:flex; flex-wrap:wrap; align-items:center; gap:2rem;">
+  <div style="flex:1; min-width:280px; text-align:center;">
+    <video autoplay loop muted playsinline style="max-width:100%; height:auto;">
+      <source src="37-80e4b386-unscreen.mp4" type="video/mp4">
+      <img src="37-80e4b386-unscreen.mp4" alt="Rhino mascot">
+    </video>
+  </div>
+  <div style="flex:1; min-width:280px;">
+    <h3 class="kicker">Immune Support</h3>
+    <p class="lead">Formulated to support the body's natural defense mechanisms with essential vitamins and minerals.</p>
+    <h3 class="kicker" style="margin-top:1rem;">Energy & Vitality</h3>
+    <p class="lead">Slow-release carbohydrates and proteins to keep you active and satisfied.</p>
+    <h3 class="kicker" style="margin-top:1rem;">Gut Health</h3>
+    <p class="lead">Supports digestion and nutrient absorption with prebiotic ingredients.</p>
+  </div>
+</section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                <!-- Benefit Card 1 -->
-                <div class="bg-secondary-green p-6 rounded-lg shadow-xl text-center flex flex-col items-center">
-                    <img src="https://placehold.co/80x80/90EE90/228B22?text=Immunity" alt="Immunity Boost Icon" class="mb-4">
-                    <h4 class="text-2xl font-semibold mb-3">Immune Boosting</h4>
-                    <p class="text-md">Strengthen your body's natural defense mechanisms against illness.</p>
-                </div>
-                <!-- Benefit Card 2 -->
-                <div class="bg-secondary-green p-6 rounded-lg shadow-xl text-center flex flex-col items-center">
-                    <img src="https://placehold.co/80x80/90EE90/228B22?text=Energy" alt="Energy Boost Icon" class="mb-4">
-                    <h4 class="text-2xl font-semibold mb-3">Energy & Vitality</h4>
-                    <p class="text-md">Feel more energetic and vibrant throughout your day.</p>
-                </div>
-                <!-- Benefit Card 3 -->
-                <div class="bg-secondary-green p-6 rounded-lg shadow-xl text-center flex flex-col items-center">
-                    <img src="https://placehold.co/80x80/90EE90/228B22?text=Digestion" alt="Digestion Icon" class="mb-4">
-                    <h4 class="text-2xl font-semibold mb-3">Digestive Health</h4>
-                    <p class="text-md">Promotes a healthy gut for better nutrient absorption.</p>
-                </div>
-            </div>
+  <!-- short footer CTA -->
+  <section class="container" style="margin-top:2.5rem">
+    <div class="card" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+      <div>
+        <h3 style="margin-bottom:.2rem">Want a sample or bulk pricing?</h3>
+        <p class="lead">Contact our sales team for free samples and special rates for bulk orders.</p>
+      </div>
+      <div>
+        <a href="contact.html" class="btn-primary">Contact Sales</a>
+      </div>
+    </div>
+  </section>
 
-            <!-- Detailed Benefits from Images -->
-            <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
-                <div class="md:w-1/2">
-                    <img src="http://googleusercontent.com/file_content/2" alt="LOGI Nutritious Malt Powder Family Benefits" class="w-full h-auto rounded-lg shadow-lg">
-                </div>
-                <div class="md:w-1/2">
-                    <p class="text-lg leading-relaxed mb-4">
-                        As seen in our product details, LOGI Nutritious Malt Powder offers a wide range of benefits for the entire family:
-                    </p>
-                    <ul class="list-disc list-inside text-lg space-y-2">
-                        <li>Helps in weight loss & metabolism boost</li>
-                        <li>Improves immunity & makes body healthy</li>
-                        <li>Lowers LDL & regulates blood pressure</li>
-                        <li>Controls diabetes</li>
-                        <li>Increases bone & muscle strength</li>
-                        <li>Boosts testosterone levels & enhances sexual performance (for specific formulations)</li>
-                    </ul>
-                </div>
-            </div>
+  <footer class="site-footer">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+      <div>&copy; 2025 LOGI. All rights reserved.</div>
+      <div style="opacity:.92">
+        Email: 
+        <a href="mailto:support@logi.company" style="color:white; text-decoration:underline">
+          support@logi.company
+        </a> 
+      </div>
 
-            <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-                <div class="md:w-1/2">
-                    <img src="http://googleusercontent.com/file_content/0" alt="LOGI Nutritious Malt Powder Usage and Chart" class="w-full h-auto rounded-lg shadow-lg">
-                </div>
-                <div class="md:w-1/2">
-                    <h4 class="text-3xl font-bold mb-4">How to Use & Nutritional Value</h4>
-                    <p class="text-lg leading-relaxed mb-4">
-                        LOGI Nutritious Malt Powder is easy to integrate into your daily routine. Simply follow the instructions
-                        on the pack for optimal benefits. Our detailed nutritional chart ensures you know exactly what goodness you're getting.
-                    </p>
-                    <p class="text-md italic">
-                        (Refer to the image for specific dosage, precautions, and full nutritional chart.)
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <!-- New Social Media Bar -->
+      <div class="social-media-container" style="display:flex; align-items:center; gap:14px;">
+        <span style="font-family: 'AbeeZee', sans-serif; font-weight:800; font-size:1.5rem; color:white;">
+          Follow us :
+        </span>
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="bg-light-green py-16 px-4 rounded-t-lg md:rounded-t-none">
-        <div class="container mx-auto text-center">
-            <h3 class="text-4xl font-bold text-primary-brown mb-8">Get in Touch</h3>
-            <p class="text-lg max-w-2xl mx-auto mb-8">
-                Have questions or want to learn more about LOGI? We'd love to hear from you!
-                Reach out to us using the form below or through our contact details.
-            </p>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/your_page" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="28">
+        </a>
 
-            <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-                <div class="mb-6">
-                    <input type="text" id="name" name="name" placeholder="Your Name"
-                           class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green transition duration-200"
-                           required>
-                </div>
-                <div class="mb-6">
-                    <input type="email" id="email" name="email" placeholder="Your Email"
-                           class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green transition duration-200"
-                           required>
-                </div>
-                <div class="mb-6">
-                    <textarea id="message" name="message" rows="6" placeholder="Your Message"
-                              class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green transition duration-200"
-                              required></textarea>
-                </div>
-                <button type="submit"
-                        class="bg-primary-green text-white text-xl font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-secondary-green transition duration-300">
-                    Send Message
-                </button>
-            </form>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/your_page" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="28">
+        </a>
 
-            <div class="mt-12 text-lg text-primary-brown">
-                <p>Email: <a href="mailto:info@logihealth.com" class="text-secondary-brown hover:underline">info@logihealth.com</a></p>
-                <p>Phone: <a href="tel:+1234567890" class="text-secondary-brown hover:underline">+1 (234) 567-890</a></p>
-                <p>Address: 123 Health Lane, Wellness City, Global 54321</p>
-            </div>
-        </div>
-    </section>
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/your_channel" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="28">
+        </a>
 
-    <!-- Footer -->
-    <footer class="bg-primary-brown text-white py-8 px-4 rounded-t-lg">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2025 LOGI. All rights reserved.</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="hover:text-light-green transition duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-light-green transition duration-300">Terms of Service</a>
-            </div>
-        </div>
-    </footer>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/your_number" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="28">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
 
+
+  <script>
+      function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+
+    // simple mobile nav (expand to full in your project if needed)
+    const btn = document.getElementById('mobileBtn');
+    btn && btn.addEventListener('click', () => {
+      alert('Open mobile navigation — replicate desktop links or implement a drawer as needed.');
+    });
+  </script>
 </body>
 </html>
