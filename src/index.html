@@ -245,3 +245,250 @@ nav {
   </script>
 </body>
 </html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_largefill.png">
+<link rel="icon" type="image/x-icon" href="favicon_largefill.ico">
+  <title>LOGI FOR SMART LIVING</title>
+  <style>
+/* Basic nav styling */
+nav {
+  position: relative;
+}
+
+/* Hide menu in desktop */
+#menu {
+  display: none;
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  #menu {
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  /* When menu is active */
+  #menu.show {
+    display: flex;
+    max-height: 300px; /* enough for your links */
+    opacity: 1;
+  }
+
+  #menu li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #menu a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    /* CSS for the container */
+    .social-media-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    /* CSS for the small logos */
+    .social-media-container img {
+      width: 28px; /* Adjust this value for different small sizes (e.g., 24px, 30px) */
+      height: auto;
+      transition: transform 0.2s ease; /* Optional hover effect */
+    }
+
+    .social-media-container img:hover {
+      transform: scale(1.1); /* Makes the logo slightly larger on hover */
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+ <header class="header">
+    <div class="container flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="https://i.ibb.co/My1QkhYF/logilogo2withoutbg.png" alt="LOGI Product Logo" class="h-32 w-auto">
+        <div style="font-weight:800;color:var(--brown-1)"></div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="benefits.html">Become Franchise</a>
+        <a class="nav-link" href="products.html">Products</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+      <nav>
+<nav></nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="benefits.html">Franchise</a></li>
+      <li><a href="products.html">products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+</nav>  
+
+    </div>
+  </header>
+
+  <!-- Hero: full-bleed video -->
+  <section class="hero-large">
+    <!-- Put hero.mp4 in same folder (rename your uploaded screen recording to hero.mp4) -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="hero.mp4" type="video/mp4">
+      <!-- fallback GIF -->
+      <img src="https://i.ibb.co/pgvGq97/Rhino-Eats-Rice-Shows-Tasty-unscreen.gif" alt="LOGI hero" style="width:100%;height:100%;object-fit:cover;">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content container">
+      <div class="hero-text">
+        <span class="hero-eyebrow">Natural • Nutritious • Trusted</span>
+        <h1 class="hero-title">LOGI-LOW GI FOR SMART LIVING</h1>
+        <p class="lead" style="color:rgba(255,255,255,0.92); max-width:60%;">LOGI delivers wholesome nutrition with carefully selected ingredients to support immunity, energy and digestive health — made for families who care about real results and real taste.</p>
+
+        <div style="margin-top:1.25rem;">
+          <a href="products.html" class="btn-primary">View Products</a>
+          <a href="benefits.html" style="margin-left:12px; color:white; font-weight:700; text-decoration:underline">Become Franchise →</a>
+        </div>
+      </div>
+
+      <!-- right side feature card -->
+      <div class="hidden md:block" style="width:380px;">
+        <div class="card" style="background:rgba(255,255,255,0.06); color:white;">
+          <h4 style="font-weight:800; margin-bottom:.5rem">Featured — LOGI Malt Powder</h4>
+          <p style="opacity:.92; margin-bottom:1rem;">Immune boosting formula, vitamins, minerals and natural extracts for the whole family.</p>
+          <ul style="list-style:disc; margin-left:1rem; opacity:.95;">
+            <li>Net weight: 500g</li>
+            <li>Usage: Mix 2 scoops with warm milk/water</li>
+            <li>Gluten-free option available</li>
+          </ul>
+          <div style="margin-top:1rem;">
+            <a href="products.html" class="btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+<section class="container" style="margin-top:2rem; display:flex; flex-wrap:wrap; align-items:center; gap:2rem;">
+  <div style="flex:1; min-width:280px; text-align:center;">
+    <video autoplay loop muted playsinline style="max-width:100%; height:auto;">
+      <source src="37-80e4b386-unscreen.mp4" type="video/mp4">
+      <img src="37-80e4b386-unscreen.mp4" alt="Rhino mascot">
+    </video>
+  </div>
+  <div style="flex:1; min-width:280px;">
+    <h3 class="kicker">Immune Support</h3>
+    <p class="lead">Formulated to support the body's natural defense mechanisms with essential vitamins and minerals.</p>
+    <h3 class="kicker" style="margin-top:1rem;">Energy & Vitality</h3>
+    <p class="lead">Slow-release carbohydrates and proteins to keep you active and satisfied.</p>
+    <h3 class="kicker" style="margin-top:1rem;">Gut Health</h3>
+    <p class="lead">Supports digestion and nutrient absorption with prebiotic ingredients.</p>
+  </div>
+</section>
+
+  <!-- short footer CTA -->
+  <section class="container" style="margin-top:2.5rem">
+    <div class="card" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+      <div>
+        <h3 style="margin-bottom:.2rem">Want a sample or bulk pricing?</h3>
+        <p class="lead">Contact our sales team for free samples and special rates for bulk orders.</p>
+      </div>
+      <div>
+        <a href="contact.html" class="btn-primary">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+      <div>&copy; 2025 LOGI. All rights reserved.</div>
+      <div style="opacity:.92">
+        Email: 
+        <a href="mailto:support@logi.company" style="color:white; text-decoration:underline">
+          support@logi.company
+        </a> 
+      </div>
+
+      <!-- New Social Media Bar -->
+      <div class="social-media-container" style="display:flex; align-items:center; gap:14px;">
+        <span style="font-family: 'AbeeZee', sans-serif; font-weight:800; font-size:1.5rem; color:white;">
+          Follow us :
+        </span>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/your_page" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="28">
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/your_page" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="28">
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/your_channel" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="28">
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/your_number" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="28">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+      function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+
+    // simple mobile nav (expand to full in your project if needed)
+    const btn = document.getElementById('mobileBtn');
+    btn && btn.addEventListener('click', () => {
+      alert('Open mobile navigation — replicate desktop links or implement a drawer as needed.');
+    });
+  </script>
+</body>
+</html>
